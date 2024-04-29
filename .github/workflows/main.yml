@@ -13,6 +13,7 @@ jobs:
         run: echo "Hello - From Runner"
 
   CT:
+    needs: CI
     runs-on: ubuntu:latest
     steps:
     - name: CODE TEST
