@@ -14,7 +14,7 @@ jobs:
 
   CT:
     needs: CI
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - name: CODE TEST
         run: echo "Excute your code here"
