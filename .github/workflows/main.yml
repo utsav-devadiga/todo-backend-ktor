@@ -11,3 +11,10 @@ jobs:
     steps:
       - name: echo
         run: echo "Hello - From Runner"
+
+  CT:
+    runs-on: ubuntu:latest
+    steps:
+    - name: CODE TEST
+      run: echo "Excute your code here"
+  
