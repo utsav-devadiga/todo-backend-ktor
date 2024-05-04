@@ -6,16 +6,17 @@ import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
 import org.jetbrains.exposed.sql.transactions.transaction
+import todo.models.ApplicationConstants
 
 object DatabaseFactory {
 
     fun init() {
 
         val database = Database.connect(
-            url = "TODO-RDS-EBS-LOCATION_HERE",
-            driver = "org.postgresql.Driver",
-            user = "postgres",
-            password = "root!root"
+            url = ApplicationConstants.URL,
+            driver = ApplicationConstants.DRIVER,
+            user = ApplicationConstants.USER_NAME_DATABASE,
+            password = ApplicationConstants.PASSWORD_DATABASE
         )
 
 

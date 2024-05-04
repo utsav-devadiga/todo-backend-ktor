@@ -10,6 +10,7 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.server.util.*
 import todo.db.TodoDao
+import todo.models.ApplicationConstants
 import todo.models.Message
 import todo.models.Todo
 import todo.routes.getAllTodo
@@ -25,7 +26,7 @@ fun Application.configureRouting(dao: TodoDao) {
         basic("auth-basic") {
             realm = "Access to the '/' path"
             validate { credentials ->
-                if (credentials.name == "todo" && credentials.password == "z7^6@tP2Y&h#Fs9D") {
+                if (credentials.name == ApplicationConstants.AUTH_USER && credentials.password == ApplicationConstants.AUTH_PASSWORD) {
                     UserIdPrincipal(credentials.name)
                 } else {
                     null
