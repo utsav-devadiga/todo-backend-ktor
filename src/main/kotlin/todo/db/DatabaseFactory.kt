@@ -11,7 +11,7 @@ object DatabaseFactory {
 
     fun init() {
         val database = Database.connect(
-            url = "TODO-RDS-EBS-LOCATION_HERE",
+            url = "jdbc:postgresql://awseb-e-vstz3anued-stack-awsebrdsdatabase-vzqrp6v6anck.cv6ubpneel2e.ap-south-1.rds.amazonaws.com:5432/TODO",
             driver = "org.postgresql.Driver",
             user = "postgres",
             password = "root!root"
