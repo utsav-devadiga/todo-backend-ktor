@@ -1,0 +1,21 @@
+name: workflow
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: echo "Hello - From Runner"
+
+  CT:
+    needs: CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: CODE TEST
+        run: echo "Excute your code here"
+  
