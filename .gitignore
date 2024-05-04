@@ -40,3 +40,6 @@ out/
 
 # Ignore application.conf file
 /src/main/resources/application.conf
+
+# Ignore application.constant file
+/src/main/kotlin/todo/models/ApplicationConstants.kt
